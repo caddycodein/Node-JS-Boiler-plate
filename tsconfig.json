@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "lib": ["es2018"],
+    "rootDirs": ["tests", "src"],
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "baseUrl": ".",
+       "paths": {
+           "*": [
+               "node_modules/*",
+               "tests/*",
+           ]
+     }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    ".env",
+    ".env.*",
+    "tests/**/*.ts",
+    "index.js",
+    "jest.config.js",
+    "config/*.config.js" // for *.con, "src/repository/integration/ClientIntegrations.js"fig.js files
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}
