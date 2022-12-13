@@ -1,0 +1,76 @@
+{
+  "app": "npx ts-node --prefer-ts-exts bin/creditcheck-lambda-cdk.ts",
+  "watch": {
+    "include": ["**"],
+    "exclude": ["README.md", "cdk*.json", "**/*.d.ts", "**/*.js", "tsconfig.json", "package*.json", "yarn.lock", "node_modules", "test"]
+  },
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:stackRelativeExports": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+    "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
+    "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": true,
+    "@aws-cdk/aws-iam:minimizePolicies": true,
+    "@aws-cdk/core:newStyleStackSynthesis": true,
+    "@aws-cdk/core:target-partitions": ["aws", "aws-cn"],
+    "globals": {
+      "appName": "creditcheck"
+    },
+    "environments": [
+      {
+        "environment": "develop",
+        "branchName": "develop",
+        "accountNumber": "760389274302",
+        "region": "ap-south-1",
+        "db_name": "CreditCheckTest",
+        "db_host": "sixdb30122019.cc1jvdhqk6ad.us-west-2.rds.amazonaws.com",
+        "db_port": "1433",
+        "db_username": "ssdbuser",
+        "db_password": "Q2FkZHljb2Rl",
+        "signicat_api_url": "https://api.signicat.io",
+        "signicat_new_api_url": "https://api.signicat.com"
+      },
+      {
+        "environment": "test",
+        "branchName": "test",
+        "accountNumber": "760389274302",
+        "region": "us-west-2",
+        "db_name": "CreditCheckTest",
+        "db_host": "sixdb30122019.cc1jvdhqk6ad.us-west-2.rds.amazonaws.com",
+        "db_port": "1433",
+        "db_username": "ssdbuser",
+        "db_password": "Q2FkZHljb2Rl",
+        "signicat_api_url": "https://api.signicat.io",
+        "signicat_new_api_url": "https://api.signicat.com"
+      },
+      {
+        "environment": "uat",
+        "branchName": "uat",
+        "accountNumber": "760389274302",
+        "region": "us-west-2",
+        "db_name": "CreditCheckTest",
+        "db_host": "sixdb30122019.cc1jvdhqk6ad.us-west-2.rds.amazonaws.com",
+        "db_port": "1433",
+        "db_username": "ssdbuser",
+        "db_password": "Q2FkZHljb2Rl",
+        "signicat_api_url": "https://api.signicat.io",
+        "signicat_new_api_url": "https://api.signicat.com"
+      },
+      {
+        "environment": "eu-prod",
+        "branchName": "main",
+        "accountNumber": "760389274302",
+        "region": "eu-north-1",
+        "db_name": "CreditCheck",
+        "db_host": "sixstoragedb.ciiqx44sw8dp.eu-north-1.rds.amazonaws.com",
+        "db_port": "1433",
+        "db_username": "ssdbuser",
+        "db_password": "Q2FkZHljb2Rl",
+        "signicat_api_url": "https://api.signicat.io",
+        "signicat_new_api_url": "https://api.signicat.com"
+      }
+    ]
+  }
+}

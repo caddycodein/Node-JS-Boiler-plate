@@ -1,0 +1,58 @@
+{
+  "name": "deploy",
+  "version": "0.1.0",
+  "bin": {
+    "deploy": "bin/deploy.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest --config=jest.config.js",
+    "dev": "nodemon ./src/index.ts",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.93",
+    "@types/aws-serverless-express": "^3.3.5",
+    "@types/git-branch": "^2.0.2",
+    "@types/jest": "^27.5.2",
+    "@types/node": "14.14.31",
+    "aws-cdk": "2.20.0",
+    "chai": "^4.3.6",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "ts-jest": "^27.1.5",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.8.1"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.171.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.171.0",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.31",
+    "@types/uuid": "^8.3.4",
+    "apollo-server-lambda": "^3.10.2",
+    "aws-cdk-lib": "2.20.0",
+    "aws-lambda": "^1.0.7",
+    "aws-serverless-express": "^3.4.0",
+    "cdk-cli": "^1.1.0",
+    "constructs": "^10.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.29.1",
+    "dotenv": "^16.0.1",
+    "esbuild": "^0.14.54",
+    "esbuild-windows-64": "^0.15.7",
+    "express": "^4.17.1",
+    "git-branch": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.7.1",
+    "serverless-http": "^3.0.2",
+    "source-map-support": "^0.5.16",
+    "typeorm": "^0.2.45",
+    "typescript": "^4.8.3"
+  }
+}
